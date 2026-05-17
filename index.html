@@ -82,7 +82,7 @@
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num" id="dynamic-cert-count">4</span>
+            <span class="stat-num" id="dynamic-cert-count">0</span>
             <span class="stat-label">Certifications</span>
           </div>
           <div class="hero-divider"></div>
@@ -150,7 +150,7 @@
             <span class="stat-label">Production Projects</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">4</span>
+            <span class="stat-num">0</span>
             <span class="stat-label">Certifications</span>
           </div>
           <div class="stat-card">
@@ -264,50 +264,6 @@
             </div>
             <h3>BSc in Computer Science</h3>
             <p class="timeline-school">Mattu University</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-badge" style="background: rgba(212,168,83,0.1); border-color: var(--accent); color: var(--accent);">Certification</span>
-            </div>
-            <h3>Responsive Web Design</h3>
-            <p class="timeline-school">freeCodeCamp</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-badge" style="background: rgba(212,168,83,0.1); border-color: var(--accent); color: var(--accent);">Certification</span>
-            </div>
-            <h3>JavaScript Algorithms &amp; Data Structures</h3>
-            <p class="timeline-school">freeCodeCamp</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-badge" style="background: rgba(212,168,83,0.1); border-color: var(--accent); color: var(--accent);">Certification</span>
-            </div>
-            <h3>Back End Development &amp; APIs</h3>
-            <p class="timeline-school">freeCodeCamp</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-badge" style="background: rgba(212,168,83,0.1); border-color: var(--accent); color: var(--accent);">Certification</span>
-            </div>
-            <h3>Front End Development Libraries</h3>
-            <p class="timeline-school">freeCodeCamp</p>
           </div>
         </div>
 
@@ -506,7 +462,7 @@
       // Load Certifications
       const certs = JSON.parse(localStorage.getItem('ca_certs')) || [];
       if(certs.length > 0) {
-        document.getElementById('dynamic-cert-count').innerText = (4 + certs.length);
+        document.getElementById('dynamic-cert-count').innerText = certs.length;
       }
 
       certs.forEach(cert => {
