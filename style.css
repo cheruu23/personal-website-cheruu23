@@ -98,6 +98,37 @@ body {
   height: var(--nav-h);
   background: #ffffff;
   transition: background 0.4s, box-shadow 0.4s;
+  animation: nav-slide-down 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes nav-slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* stagger nav links in */
+.nav-links li {
+  animation: nav-link-fade 0.5s ease both;
+}
+.nav-links li:nth-child(1) { animation-delay: 0.35s; }
+.nav-links li:nth-child(2) { animation-delay: 0.45s; }
+.nav-links li:nth-child(3) { animation-delay: 0.55s; }
+.nav-links li:nth-child(4) { animation-delay: 0.65s; }
+.nav-links li:nth-child(5) { animation-delay: 0.75s; }
+
+@keyframes nav-link-fade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-actions {
+  animation: nav-link-fade 0.5s ease 0.8s both;
 }
 
 .navbar.scrolled {
@@ -307,6 +338,23 @@ body {
 .role-bracket{ color: var(--muted2); }
 .role-str    { color: #059669; }
 .role-comma  { color: var(--muted2); }
+
+/* typing pop-in for each stack item */
+.role-typed {
+  opacity: 0;
+  animation: role-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: calc(1s + var(--i) * 0.28s);
+}
+.role-comma {
+  opacity: 0;
+  animation: role-pop 0.3s ease forwards;
+  animation-delay: calc(1.15s + var(--i, 0) * 0.28s);
+}
+
+@keyframes role-pop {
+  from { opacity: 0; transform: translateY(6px) scale(0.85); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
 
 .hero-bio {
   color: var(--muted2);
