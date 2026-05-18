@@ -35,8 +35,6 @@
   </nav>
 
   <section class="hero" id="hero">
-    <div class="hero-grain"></div>
-    <div class="hero-glow"></div>
     <div class="hero-inner">
       <div class="hero-left">
         <div class="hero-badge">
@@ -74,29 +72,11 @@
             View GitHub
           </a>
         </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="stat-num" id="dynamic-project-count">1+</span>
-            <span class="stat-label">Production Apps</span>
-          </div>
-          <div class="hero-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num" id="dynamic-cert-count">0</span>
-            <span class="stat-label">Certifications</span>
-          </div>
-          <div class="hero-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">MERN</span>
-            <span class="stat-label">Stack</span>
-          </div>
-        </div>
       </div>
 
       <div class="hero-right">
         <div class="hero-photo-wrap">
-          <div class="hero-photo-ring"></div>
-          <div class="hero-photo-circle">
+          <div class="hero-photo-rect">
             <img src="Pasted image.png" alt="Cherinet Asrat" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="hero-initials">CA</div>
           </div>
@@ -118,6 +98,25 @@
       <div class="scroll-line"></div>
     </div>
   </section>
+
+  <div class="stats-strip">
+    <div class="stats-strip-inner">
+      <div class="strip-stat">
+        <span class="strip-num" id="dynamic-project-count">1+</span>
+        <span class="strip-label">Production Apps</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-num">MERN</span>
+        <span class="strip-label">Stack</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-num">2025</span>
+        <span class="strip-label">Graduate</span>
+      </div>
+    </div>
+  </div>
 
   <section class="section" id="about">
     <div class="container">
@@ -150,7 +149,7 @@
             <span class="stat-label">Production Projects</span>
           </div>
           <div class="stat-card">
-            <span class="stat-num">0</span>
+            <span class="stat-num" id="dynamic-cert-count">0</span>
             <span class="stat-label">Certifications</span>
           </div>
           <div class="stat-card">
