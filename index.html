@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cherinet Asrat — Fullstack MERN Developer. CS graduate from Mattu University. Built production apps for Mattu City Administration and Ethiopian Electric Utility. Open to developer roles." />
+  <meta name="keywords" content="Cherinet Asrat, Fullstack Developer, MERN Stack, React, Node.js, MongoDB, Ethiopia, Mattu University, Hire Developer" />
+  <meta name="author" content="Cherinet Asrat" />
+  <meta name="theme-color" content="#0d0d0f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cherinet Asrat — Fullstack MERN Developer" />
+  <meta property="og:description" content="CS graduate building production-grade MERN apps. Shipped a Land Information Management System for city government. Open to opportunities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cherinet Asrat — Fullstack MERN Developer" />
+  <meta name="twitter:description" content="CS graduate building production-grade MERN apps. Open to developer roles." />
+
+  <title>Cherinet Asrat — Fullstack MERN Developer · Open to Work</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232979ff'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' font-weight='700' fill='%23000' text-anchor='middle'%3ECA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Cursor Glow (desktop) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo nav-logo--photo" aria-label="Cherinet Asrat — Home">
+        <img src="Pasted image.png" alt="Cherinet Asrat" class="logo-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="logo-mark logo-mark--fallback">CA</span>
+        <span class="logo-pulse" aria-hidden="true"></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://www.linkedin.com/in/cherinet-asrat-697953410" target="_blank" rel="noopener" class="btn-nav btn-nav--ghost">LinkedIn</a>
+        <a href="mailto:cheruuasrat30@gmail.com" class="btn-nav">Hire Me</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <!-- Open to work badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Open to work · Remote & Addis Ababa</span>
+        </div>
+
+        <h1>Cherinet<br><em>Asrat</em></h1>
+        <p class="hero-title-sub"><span class="hero-title-highlight">Fullstack</span> Developer</p>
+
+        <!-- Animated rotating role (terminal style) -->
+        <div class="hero-role" id="heroRole" aria-live="polite">
+          <span class="role-prefix">const</span>
+          <span class="role-var">role</span>
+          <span class="role-eq"> = </span>
+          <span class="role-bracket">"</span>
+          <span class="role-typed" id="roleTyped"></span>
+          <span class="role-cursor" aria-hidden="true">▌</span>
+          <span class="role-bracket">"</span>
+        </div>
+
+        <p class="hero-bio">
+          CS graduate from Mattu University building production-grade MERN apps.
+          Shipped a Land Information Management System for city government
+          and infrastructure tooling for the Ethiopian Electric Utility.
+          Looking to grow fast and ship real features.
+        </p>
+
+        <div class="hero-cta">
+          <a href="mailto:cheruuasrat30@gmail.com" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Get in Touch
+          </a>
+          <a href="https://github.com/cheruu23" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            View GitHub
+          </a>
+          <a href="cv.html" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            View Resume
+          </a>
+        </div>
+
+        <!-- "Now" widget -->
+        <div class="now-widget">
+          <div class="now-label">
+            <span class="now-dot"></span>
+            <span>NOW</span>
+          </div>
+          <p class="now-text" id="nowText">Building EEU Infrastructure Protector v2 · Open to MERN opportunities</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-rect">
+            <div class="hero-photo-gradient" aria-hidden="true"></div>
+            <img src="Pasted image.png" alt="Cherinet Asrat" onerror="this.style.display='none';this.previousElementSibling.classList.add('visible')">
+            <div class="hero-initials">CA</div>
+          </div>
+          <div class="hero-tag hero-tag--1">
+            <span class="tag-dot react"></span> React.js
+          </div>
+          <div class="hero-tag hero-tag--2">
+            <span class="tag-dot node"></span> Node.js
+          </div>
+          <div class="hero-tag hero-tag--3">
+            <span class="tag-dot mongo"></span> MongoDB
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-strip-inner">
+      <div class="strip-stat">
+        <span class="strip-num"><span class="counter" data-target="2">0</span>+</span>
+        <span class="strip-label">Production Apps</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-num">MERN</span>
+        <span class="strip-label">Stack</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-num">2025</span>
+        <span class="strip-label">CS Graduate</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-num"><span class="counter" data-target="500">0</span>+</span>
+        <span class="strip-label">Commits This Year</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">01 — About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text-block">
+          <p>
+            I'm a Computer Science graduate from Mattu University specializing in
+            fullstack web development with the MERN stack.
+          </p>
+          <p>
+            My most significant project is a <strong>Land Information Management System</strong> built
+            for Mattu City Administration — a real production system that digitized paper-based land
+            records, improved data security, and accelerated processing times for government staff.
+          </p>
+          <p>
+            I also built a <strong>multilingual infrastructure management platform</strong> for the
+            Ethiopian Electric Utility, supporting English, Amharic, and Afaan Oromoo.
+            I'm driven by building software that solves genuine problems. I'm seeking a developer
+            role where I can contribute, grow fast, and ship features that matter.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">BSc</span>
+            <span class="stat-label">Computer Science</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Production Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" id="dynamic-cert-count">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Languages: EN · AM · OM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">02 — Services</span>
+        <h2 class="section-title">What I Can Do For You</h2>
+        <p class="section-subtitle">From idea to production — focused, fast, and built to last.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+              <path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <h3>Fullstack Web Apps</h3>
+          <p>End-to-end MERN applications — auth, dashboards, CRUD, role-based access. Production-ready from day one.</p>
+          <ul class="service-tags">
+            <li>React</li><li>Node.js</li><li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+              <path d="M4 6h16M4 12h10M4 18h7"/><circle cx="18" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>REST API Development</h3>
+          <p>Secure, well-documented APIs with JWT auth, validation, and clean architecture your team can extend.</p>
+          <ul class="service-tags">
+            <li>Express</li><li>JWT</li><li>Mongoose</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6a9 3 0 0018 0V5M3 11v6a9 3 0 0018 0v-6"/>
+            </svg>
+          </div>
+          <h3>Database Design</h3>
+          <p>Schema modeling, query optimization, and indexes that actually scale. Mongoose or raw MongoDB driver.</p>
+          <ul class="service-tags">
+            <li>MongoDB</li><li>Mongoose</li><li>Schema Design</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24">
+              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+            </svg>
+          </div>
+          <h3>Code Review & Mentoring</h3>
+          <p>Junior-to-mid level code reviews, debugging sessions, and 1:1 mentoring for new developers.</p>
+          <ul class="service-tags">
+            <li>Best Practices</li><li>Git</li><li>Architecture</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">03 — Tech Stack</span>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+      </div>
+
+      <div class="skills-layout">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skills-grid">
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="2.5" fill="#61dafb"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.2" fill="none"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.2" fill="none" transform="rotate(60 12 12)"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.2" fill="none" transform="rotate(120 12 12)"/>
+              </svg>
+              <span>React.js</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#f7df1e"/>
+                <path d="M7 17.5c.4.7 1 1.2 2 1.2 1.1 0 1.7-.5 1.7-1.3 0-.9-.7-1.2-1.8-1.7l-.6-.3C6.9 14.8 6 14 6 12.4c0-1.5 1.1-2.6 2.9-2.6 1.2 0 2.1.4 2.7 1.5l-1.5.9c-.3-.5-.6-.7-1.2-.7-.6 0-.9.3-.9.7 0 .5.3.7 1.3 1.1l.6.3c1.6.7 2.5 1.4 2.5 3 0 1.7-1.3 2.8-3.1 2.8-1.7 0-2.8-.8-3.4-2l1.1-.9zm7.5.2c.5.8 1.1 1.4 2.2 1.4 1 0 1.6-.5 1.6-1.1 0-.8-.6-1.1-1.7-1.5l-.6-.3c-1.7-.7-2.8-1.6-2.8-3.5 0-1.7 1.3-3 3.3-3 1.4 0 2.4.5 3.1 1.8l-1.7 1.1c-.4-.7-.8-1-1.4-1-.6 0-1 .4-1 1 0 .7.4 1 1.4 1.4l.6.3c2 .8 3.1 1.7 3.1 3.6 0 2-1.6 3.1-3.7 3.1-2.1 0-3.4-1-4-2.4l1.6-.9z" fill="#1a1a1a"/>
+              </svg>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 2l1.5 17L12 21l7.5-2L21 2H3z" fill="#e34f26"/>
+                <path d="M12 19.5l6.1-1.7 1.3-14.8H12v16.5z" fill="#ef652a"/>
+                <path d="M12 11h-3.5l-.2-2.5H12V6.5H5.8l.6 6.5H12V11zm0 5.5l-.1.1-2.5-.7-.2-2.1H6.7l.3 3.7 5 1.4V16.5z" fill="#fff"/>
+                <path d="M12 11v2.5h3.3l-.3 3.1-3 .8V19.5l5-1.4.4-4.6H12zm0-4.5v2.5h6.5l.2-2.5H12z" fill="#ebebeb"/>
+              </svg>
+              <span>HTML5</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 2l1.5 17L12 21l7.5-2L21 2H3z" fill="#264de4"/>
+                <path d="M12 19.5l6.1-1.7 1.3-14.8H12v16.5z" fill="#2965f1"/>
+                <path d="M12 11H8.6l-.2-2.5H12V6.5H6l.6 6.5H12V11zm0 5.5-.1.1-2.5-.7-.2-2.1H6.7l.3 3.7 5 1.4V16.5z" fill="#fff"/>
+                <path d="M12 11v2.5h3.2l-.3 3.1-2.9.8V19.5l5-1.4.4-4.6H12zm0-4.5v2.5h6.4l.2-2.5H12z" fill="#ebebeb"/>
+              </svg>
+              <span>CSS3</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="2" width="14" height="20" rx="2" stroke="#6366f1"/>
+                <circle cx="12" cy="18" r="1" fill="#6366f1" stroke="none"/>
+                <path d="M9 6h6" stroke-linecap="round"/>
+              </svg>
+              <span>Responsive</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Backend</h3>
+          <div class="skills-grid">
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1.5L2 7v10l10 5.5L22 17V7L12 1.5z" fill="#68a063"/>
+                <path d="M12 4.5l7 3.9v7.8l-7 3.9-7-3.9V8.4l7-3.9z" fill="#3c873a"/>
+                <path d="M12 8.5v7l3.5-2V10.5L12 8.5z" fill="#fff" opacity=".9"/>
+                <path d="M12 8.5L8.5 10.5v3l3.5 2v-7z" fill="#fff" opacity=".6"/>
+              </svg>
+              <span>Node.js</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#1a1a1a"/>
+                <text x="3" y="16" font-family="monospace" font-size="9" font-weight="bold" fill="#ffffff">ex</text>
+                <path d="M14 9h5M14 12h5M14 15h3" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <span>Express.js</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h10M4 18h7" stroke-linecap="round"/>
+                <circle cx="19" cy="12" r="3" stroke="#6366f1"/>
+                <path d="M19 9v6M16 12h6" stroke-linecap="round"/>
+              </svg>
+              <span>REST APIs</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#6366f1"/>
+                <path d="M12 4v7l3 3-3 3v3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4v7l-3 3 3 3v3" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>JWT Auth</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">Database &amp; Tools</h3>
+          <div class="skills-grid">
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C9 6 7 9.5 7 13a5 5 0 0010 0c0-3.5-2-7-5-11z" fill="#4db33d"/>
+                <path d="M12 2v18" stroke="#3fa32d" stroke-width="1.2"/>
+                <path d="M12 20c0 0-1-1-1-3" stroke="#3fa32d" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+              <span>MongoDB</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="24" height="24" rx="3" fill="#880000"/>
+                <path d="M5 12c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.1-7-7z" stroke="#fff" stroke-width="1.2" fill="none"/>
+                <path d="M9 12h6M12 9v6" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <span>Mongoose</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.2 11.2l-9.4-9.4a1.1 1.1 0 00-1.6 0L9.1 3.9l2 2a1.3 1.3 0 011.6 1.7l1.9 1.9a1.3 1.3 0 011.7 1.6 1.3 1.3 0 11-1.3.3l-1.8-1.8v4.6a1.3 1.3 0 11-1.1 0V9.3a1.3 1.3 0 01-.7-1.7L9.5 5.7 1.8 13.4a1.1 1.1 0 000 1.6l9.4 9.4a1.1 1.1 0 001.6 0l9.4-9.4a1.1 1.1 0 000-1.8z" fill="#f05032"/>
+              </svg>
+              <span>Git</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" fill="#1a1a1a" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 1.5L7.5 10.5 3 7 1.5 8.5l4 3.5-4 3.5L3 17l4.5-3.5L17 22.5l5.5-2.5v-16L17 1.5z" fill="#007acc"/>
+                <path d="M17 6.5l-6.5 5.5 6.5 5.5V6.5z" fill="#fff" opacity=".8"/>
+              </svg>
+              <span>VS Code</span>
+            </div>
+
+            <div class="skill-card">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#ff6c37"/>
+                <path d="M16 12a4 4 0 11-8 0 4 4 0 018 0z" fill="#fff" opacity=".9"/>
+                <path d="M12 8v4l2.5 2.5" stroke="#ff6c37" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>Postman</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">04 — Work</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+      <div class="projects-grid" id="projects-container">
+
+        <div class="project-card project-card--featured">
+          <div class="project-shot project-shot--land">
+            <div class="shot-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-grid">
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-header">
+            <div class="project-number">01</div>
+            <div class="project-links">
+              <span class="project-type-badge">Government · Production</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Land Information Management System</h3>
+            <p>A fullstack web application built for Mattu City Administration to digitize and secure land record management. Replaced manual paper-based workflows with a centralized digital system, improving processing speed and data security.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Apache</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact">
+              <strong>2,000+</strong> records digitized
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-shot project-shot--eeu">
+            <div class="shot-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-row">
+                <div class="mock-side"></div>
+                <div class="mock-main">
+                  <div class="mock-line w70"></div>
+                  <div class="mock-line w40"></div>
+                  <div class="mock-line w90"></div>
+                  <div class="mock-line w60"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-header">
+            <div class="project-number">02</div>
+            <div class="project-links">
+              <a href="https://github.com/cheruu23/eeu-infrstructure-protetctor" target="_blank" rel="noopener" aria-label="Source" class="project-link">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                Source
+              </a>
+              <a href="https://eeu-infrstructure-protetctor-nakb.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-type">Utility · Full-Stack · Multilingual</span>
+            <h3>EEU Infrastructure Protector</h3>
+            <p>A full-stack web application for the Ethiopian Electric Utility. Digitizes electricity service requests, infrastructure damage reporting, and field operations. Supports English, Amharic, and Afaan Oromoo.</p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">i18n</span>
+            <span class="tag">RBAC</span>
+          </div>
+          <div class="project-footer">
+            <div class="project-impact">
+              <strong>3 languages</strong> · Role-based access
+            </div>
+          </div>
+        </div>
+
+        <!-- dynamic projects injected here -->
+      </div>
+      <div class="projects-cta">
+        <a href="https://github.com/cheruu23" target="_blank" rel="noopener" class="btn btn-ghost">
+          See All on GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">05 — Endorsements</span>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle">A few words from people I've worked with.</p>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Testimonial cards rendered by JS from localStorage + defaults -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education -->
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">06 — Background</span>
+        <h2 class="section-title">Experience &amp; Education</h2>
+      </div>
+      <div class="timeline" id="experience-timeline">
+
+        <div class="timeline-item timeline-item--work">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">2024 – Present</span>
+              <span class="timeline-badge timeline-badge--work">Freelance</span>
+            </div>
+            <h3>Fullstack Developer</h3>
+            <p class="timeline-school">EEU Infrastructure Protector — Ethiopian Electric Utility</p>
+            <p class="timeline-desc">Designed and built a multilingual (EN/AM/OM) field operations platform. Replaced paper-based infrastructure damage reporting with a role-based digital system. Stack: React, Node, Express, MongoDB.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--work">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">2023 – 2024</span>
+              <span class="timeline-badge timeline-badge--work">Project</span>
+            </div>
+            <h3>Fullstack Developer</h3>
+            <p class="timeline-school">Land Information Management System — Mattu City Administration</p>
+            <p class="timeline-desc">Built a production land-record digitization system for city government. Improved processing times and data security for thousands of records.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">2022 – 2025</span>
+              <span class="timeline-badge">Graduated</span>
+            </div>
+            <h3>BSc in Computer Science</h3>
+            <p class="timeline-school">Mattu University</p>
+            <p class="timeline-desc">Studied algorithms, data structures, databases, software engineering, and fullstack web development.</p>
+          </div>
+        </div>
+
+        <!-- Dynamic education/certs injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">07 — Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Open to developer roles, freelance projects, and collaborations. Drop me a message and I'll respond within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:cheruuasrat30@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Email</span>
+            <p>cheruuasrat30@gmail.com</p>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="tel:+251989401323" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Phone</span>
+            <p>+251 989 401 323</p>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://github.com/cheruu23" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">GitHub</span>
+            <p>github.com/cheruu23</p>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <a href="https://www.linkedin.com/in/cherinet-asrat-697953410" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <p>linkedin.com/in/cherinet-asrat-697953410</p>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+        <div class="contact-card contact-card--static">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Location</span>
+            <p>Addis Ababa, Ethiopia</p>
+          </div>
+        </div>
+        <a href="#contact-form" class="contact-card contact-card--cta">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Send a message</span>
+            <p>Use the form below ↓</p>
+          </div>
+          <div class="contact-arrow">→</div>
+        </a>
+      </div>
+
+      <!-- Contact form -->
+      <form class="contact-form" id="contact-form" onsubmit="return submitContactForm(event)">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Your Email</label>
+            <input type="email" id="cf-email" name="email" required placeholder="jane@company.com" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="subject" required placeholder="Fullstack role / Freelance project / Coffee chat" />
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required placeholder="Hi Cherinet, I'd love to chat about..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Message
+        </button>
+        <p class="form-hint">Opens your mail client with a prefilled draft — no data stored.</p>
+      </form>
+    </div>
+  </section>
+
+  <a href="#hero" class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 15l-6-6-6 6"/></svg>
+  </a>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#hero" class="nav-logo nav-logo--photo nav-logo--footer" aria-label="Back to top">
+          <img src="Pasted image.png" alt="Cherinet Asrat" class="logo-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="logo-mark logo-mark--fallback">CA</span>
+        </a>
+        <p class="footer-copy">Cherinet Asrat · Fullstack Developer · © 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/cheruu23" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/cherinet-asrat-697953410" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:cheruuasrat30@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+      <div class="footer-built">
+        <span>Built with vanilla HTML, CSS &amp; JS · No frameworks</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
