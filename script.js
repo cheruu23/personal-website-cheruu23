@@ -1,18 +1,3 @@
-/* =========================================================
-   Cherinet Asrat — Portfolio site JS
-   - Rotating role text
-   - Cursor glow (desktop)
-   - Scroll progress bar
-   - Navbar scroll state & active link
-   - Mobile menu
-   - Counter animation
-   - Fade-in observer
-   - Testimonials rendering
-   - Contact form (mailto fallback)
-   - Now widget rotation
-   - Dynamic content loading (admin panel compatibility)
-   ========================================================= */
-
 (() => {
   'use strict';
 
@@ -122,7 +107,7 @@
     'MERN Stack Engineer',
     'API Builder',
     'Problem Solver',
-    'Open Source Curious',
+    'IT Support',
   ];
 
   function typeRole(el, text, speed = 70) {
@@ -176,6 +161,7 @@
     'Building EEU Infrastructure Protector v2 · Open to MERN opportunities',
     'Learning: Advanced React patterns & system design',
     'Available for freelance · 1 slot open this month',
+    'Learning AI and Data Science from Addis Ababa University',
   ];
   let nowIdx = 0;
   function rotateNowText() {
@@ -239,27 +225,6 @@
   }, { threshold: 0.4 });
   counterEls.forEach(el => counterObs.observe(el));
 
-  // ── testimonials ────────────────────────────────────────
-  const DEFAULT_TESTIMONIALS = [
-    {
-      text: 'Cherinet delivered our land records system ahead of schedule. The team adapted it for our staff with minimal training.',
-      name: 'Mattu City Admin',
-      role: 'Government Client',
-      initials: 'MC',
-    },
-    {
-      text: 'Strong fundamentals, ships clean code, and asks the right questions. Would happily work with him again.',
-      name: 'EEU Project Lead',
-      role: 'Engineering Manager',
-      initials: 'EL',
-    },
-    {
-      text: 'Reliable, fast learner, and a great communicator. Exactly the kind of dev you want on a small team.',
-      name: 'Classmate & Collaborator',
-      role: 'Mattu University',
-      initials: 'CU',
-    },
-  ];
 
   function renderTestimonials() {
     const grid = $('#testimonialsGrid');
