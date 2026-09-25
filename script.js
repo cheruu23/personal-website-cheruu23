@@ -159,9 +159,10 @@
   // ── "Now" widget text rotation ───────────────────────────
   const NOW_LINES = [
     'Building EEU Infrastructure Protector v2 · Open to MERN opportunities',
-    'Learning: Advanced React patterns & system design',
+    'Completed 4-month AI & Data Science training at Addis Ababa University',
+    'Building: English-to-Amharic neural translation with PyTorch',
+    'Exploring: computer vision, NLP, and practical model deployment',
     'Available for freelance · 1 slot open this month',
-    'Learning AI and Data Science from Addis Ababa University',
   ];
   let nowIdx = 0;
   function rotateNowText() {
@@ -293,7 +294,7 @@
     }
 
     projects.forEach((proj, index) => {
-      const num = (index + 2).toString().padStart(2, '0');
+      const num = (index + 8).toString().padStart(2, '0');
       const tagsHtml = (proj.techStack || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
       const html = `
         <div class="project-card fade-in">

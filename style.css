@@ -1059,6 +1059,14 @@ a { color: inherit; }
   background: linear-gradient(135deg, #5c1a1a, #0d0d0f);
 }
 
+.project-shot--portfolio {
+  background: linear-gradient(135deg, #183b47, #0d0d0f);
+}
+
+.project-shot--ai {
+  background: linear-gradient(135deg, #233a31, #0d0d0f);
+}
+
 /* real screenshot image */
 .project-shot-img {
   width: 100%;
