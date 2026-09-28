@@ -1067,6 +1067,10 @@ a { color: inherit; }
   background: linear-gradient(135deg, #233a31, #0d0d0f);
 }
 
+.project-shot--attendance {
+  background: linear-gradient(135deg, #174943, #0d0d0f);
+}
+
 /* real screenshot image */
 .project-shot-img {
   width: 100%;
